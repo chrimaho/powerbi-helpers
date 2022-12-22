@@ -1,4 +1,4 @@
-PowerBI-Helpers
+# PowerBI-Helpers
 
 This repo is a consolidation of many different `M` functions, to enhance and extend the capability of PowerQuery, and PowerBI more broadly.
 
