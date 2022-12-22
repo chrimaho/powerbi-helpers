@@ -44,7 +44,7 @@ My testing shows that this method works well on both PowerQuery with PowerBI Des
 
 ## Function Documentation
 
-I've tried to document some functions (like, for example, [`fun_AddPrimaryKeyFromListOfColumns.pq`](/PowerQuery/Functions/Tables/fun_AddPrimaryKeyFromListOfColumns.pq)). However, adding function docs in PowerQuery is (quite frankly) very messy... for more info, see [here](https://docs.microsoft.com/en-us/power-query/handlingdocumentation) and [here](https://bengribaudo.com/blog/2021/03/17/5523/power-query-m-primer-part20-metadata). It's on my to-do list to add some helpful docs for each function, plus some examples of how to implement them. But I haven't quite found the time for this just yet. Any help from the Open Source Community would be fantastic! 😁
+I've tried to document some functions (like, for example, [`fun_AddPrimaryKeyFromListOfColumns.pq`](/PowerQuery/Functions/Tables/fun_AddPrimaryKeyFromListOfColumns.pq)). However, adding function docs in PowerQuery is (quite frankly) very messy 😫... for more info, see [here](https://docs.microsoft.com/en-us/power-query/handlingdocumentation) and [here](https://bengribaudo.com/blog/2021/03/17/5523/power-query-m-primer-part20-metadata). It's on my to-do list to add some helpful docs for each function, plus some examples of how to implement them. But I haven't quite found the time for this just yet. Any help from the Open Source Community would be fantastic! 😁
 
 ## Other Repo's
 
