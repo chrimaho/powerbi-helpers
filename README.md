@@ -42,7 +42,7 @@ My testing shows that this method works well on both PowerQuery with PowerBI Des
 
 ## Other Repo's
 
-The [`repos/`](repos/) directory contains a lot of sub-modules from other Repo's available on the internet. These are only small few of the ones that are available on line. And there's soooo much good stuff in there! 👍 Enjoy!
+The [`Repos/`](Repos/) directory contains a lot of sub-modules from other Repo's available on the internet. These are only small few of the ones that are available on line. And there's soooo much good stuff in there! 👍 Enjoy!
 
 ## Project Structure
 

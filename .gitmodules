@@ -1,0 +1,30 @@
+[submodule "Repos/ImkeF/M"]
+	path = Repos/ImkeF/M
+	url = https://github.com/ImkeF/M.git
+[submodule "Repos/Hugoberry/PowerQueryExtensions"]
+	path = Repos/Hugoberry/PowerQueryExtensions
+	url = https://github.com/Hugoberry/PowerQueryExtensions.git
+[submodule "Repos/Hugoberry/PowerQueryFunctional"]
+	path = Repos/Hugoberry/PowerQueryFunctional
+	url = https://github.com/Hugoberry/PowerQueryFunctional.git
+[submodule "Repos/acaprojects/m-tools"]
+	path = Repos/acaprojects/m-tools
+	url = https://github.com/acaprojects/m-tools.git
+[submodule "Repos/tirnovar/m-custom-functions"]
+	path = Repos/tirnovar/m-custom-functions
+	url = https://github.com/tirnovar/m-custom-functions.git
+[submodule "Repos/getkks/Power-Query"]
+	path = Repos/getkks/Power-Query
+	url = https://github.com/getkks/Power-Query.git
+[submodule "Repos/mogulargmbh/powerquerysnippets"]
+	path = Repos/mogulargmbh/powerquerysnippets
+	url = https://github.com/mogulargmbh/powerquerysnippets.git
+[submodule "Repos/JaySumners/Power-BI-Tools"]
+	path = Repos/JaySumners/Power-BI-Tools
+	url = https://github.com/JaySumners/Power-BI-Tools.git
+[submodule "Repos/hohlick/pquery"]
+	path = Repos/hohlick/pquery
+	url = https://github.com/hohlick/pquery.git
+[submodule "Repos/camwally/Power-Query"]
+	path = Repos/camwally/Power-Query
+	url = https://github.com/camwally/Power-Query.git
