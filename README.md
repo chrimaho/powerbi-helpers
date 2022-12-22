@@ -39,6 +39,8 @@ My testing shows that this method works well on both PowerQuery with PowerBI Des
 >    in
 >        Source
 >    ```
+> 6. Which will give you the result as expected:<br>
+>    ![](https://i.stack.imgur.com/vAzy6.png)
 
 ## Function Documentation
 
