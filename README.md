@@ -2,6 +2,16 @@
 
 This repo is a consolidation of many different `M` functions, to enhance and extend the capability of PowerQuery, and PowerBI more broadly.
 
+## Details
+
+When working with PowerBI, and in particular PowerQuery, we find that there are many functions available. However, as developers, we may want to extend the functionality of the core language, and add more convenience functions and to extend the functionality to meet our needs. This is not only advised by Microsoft, but openly encouraged (see more info [here][1], [here][2], [here][3], [here][4], and [here][6]). Here, I've tried to collate and share some of the main ones that I use very regularly.
+
+[1]: https://learn.microsoft.com/en-us/power-query/best-practices
+[2]: https://support.microsoft.com/en-us/office/create-and-invoke-a-custom-function-5dcedf5f-45a5-4dd7-b8f4-4d35c386d712
+[3]: https://learn.microsoft.com/en-us/power-query/custom-function
+[4]: https://radacad.com/custom-functions-made-easy-in-power-bi-desktop
+[5]: https://learn.microsoft.com/en-us/power-query/dataflows/best-practices-developing-complex-dataflows
+
 ## Usage
 
 ### Manual
@@ -10,24 +20,26 @@ Due to PowerQuery's inability to import external modules (😩), these will need
 
 > 1. Locate the function you would like to use in this library.
 > 2. Copy all of the code within the `*.pq` file.
-> 3. Go to PowerQuery, and create a new blan query: `Home` > `New Source` > `Blank Query`.
-> 4. Open the Advanced Editor: `View` > `Advanced Editor`.
+> 3. Go to PowerQuery, and create a new blan query: `Home`>`New Source`>`Blank Query`.
+> 4. Open the Advanced Editor: `View`>`Advanced Editor`.
 > 5. Replace all the code with what was copied from the `*.pq` file.
 > 6. Press `Done`.
 > 7. Use the function.
 
 ### Semi-Automatic
 
-Using the process defined [here](https://stackoverflow.com/questions/57232378/store-power-query-custom-function-online-github-etc-and-call-it), you can pull the source code directly from the GitHub repository.
+Using the process defined [here][6], you can pull the source code directly from the GitHub repository.
+
+[6]: https://stackoverflow.com/questions/57232378/store-power-query-custom-function-online-github-etc-and-call-it
 
 My testing shows that this method works well on both PowerQuery with PowerBI Desktop, and PowerQuery with Excel, and PowerQuery with PowerBI DataFlows.
 
 > 1. Location the function you'd like to use in this library.
 > 2. Open the "Raw" file.<br>
->    ![](https://i.stack.imgur.com/n9Onf.png)
+>    ![][7]
 > 3. Copy the URL.
 > 4. Go to PowerQuery and open a new _Blank_ query<br>
->    ![](https://learn.microsoft.com/en-us/power-bi/transform-model/media/desktop-query-overview/query-overview-new-source-menu.png)
+>    ![][8]
 > 5. Change the function to look like this:<br>
 >    ```fs
 >    Expression.Evaluate(Text.FromBinary(Web.Contents(<PasteTheUrlHere>)),#shared)
@@ -40,11 +52,19 @@ My testing shows that this method works well on both PowerQuery with PowerBI Des
 >        Source
 >    ```
 > 6. Which will give you the result as expected:<br>
->    ![](https://i.stack.imgur.com/vAzy6.png)
+>    ![][9]
+
+[7]: https://i.stack.imgur.com/n9Onf.png
+[8]: https://learn.microsoft.com/en-us/power-bi/transform-model/media/desktop-query-overview/query-overview-new-source-menu.png
+[9]: https://i.stack.imgur.com/vAzy6.png
 
 ## Function Documentation
 
-I've tried to document some functions (like, for example, [`fun_AddPrimaryKeyFromListOfColumns.pq`](/PowerQuery/Functions/Tables/fun_AddPrimaryKeyFromListOfColumns.pq)). However, adding function docs in PowerQuery is (quite frankly) very messy 😫... for more info, see [here](https://docs.microsoft.com/en-us/power-query/handlingdocumentation) and [here](https://bengribaudo.com/blog/2021/03/17/5523/power-query-m-primer-part20-metadata). It's on my to-do list to add some helpful docs for each function, plus some examples of how to implement them. But I haven't quite found the time for this just yet. Any help from the Open Source Community would be fantastic! 😁
+I've tried to document some functions (like, for example, [`fun_AddPrimaryKeyFromListOfColumns.pq`][10]). However, adding function docs in PowerQuery is (quite frankly) very messy 😫... for more info, see [here][11] and [here][12]. It's on my to-do list to add some helpful docs for each function, plus some examples of how to implement them. But I haven't quite found the time for this just yet. Any help from the Open Source Community would be fantastic! 😁
+
+[10]: /PowerQuery/Functions/Tables/fun_AddPrimaryKeyFromListOfColumns.pq
+[11]: https://docs.microsoft.com/en-us/power-query/handlingdocumentation
+[12]: https://bengribaudo.com/blog/2021/03/17/5523/power-query-m-primer-part20-metadata
 
 ## Other Repo's
 
@@ -56,4 +76,7 @@ The [`GenericFolderStructure/`](GenericFolderStructure/) directory is the struct
 
 ## Contribution
 
-Contributions are welcome. Please [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repo and submit a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) for any updates that you'd like to make.
+Contributions are welcome. Please [Fork][13] the repo and submit a [Pull Request][14] for any updates that you'd like to make.
+
+[13]: https://docs.github.com/en/get-started/quickstart/fork-a-repo
+[14]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork
