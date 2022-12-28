@@ -4,13 +4,15 @@ This repo is a consolidation of many different `M` functions, to enhance and ext
 
 ## Details
 
-When working with PowerBI, and in particular PowerQuery, we find that there are many functions available. However, as developers, we may want to extend the functionality of the core language, and add more convenience functions and to extend the functionality to meet our needs. This is not only advised by Microsoft, but openly encouraged (see more info [here][1], [here][2], [here][3], [here][4], and [here][6]). Here, I've tried to collate and share some of the main ones that I use very regularly.
+When working with [PowerBI][pbi-overview], and in particular [PowerQuery][pq-overview], we find that there are many functions available. However, as developers, we may want to extend the functionality of the core language, and add more convenience functions and to extend the functionality to meet our needs. This is not only advised by Microsoft, but openly encouraged (see more info [here][pq-best-practices], [here][pq-create-custom-functions], [here][pq-custom-functions], [here][pq-functions-made-easy], and [here][df-best-practices]). Here, I've tried to collate and share some of the main ones that I use very regularly.
 
-[1]: https://learn.microsoft.com/en-us/power-query/best-practices
-[2]: https://support.microsoft.com/en-us/office/create-and-invoke-a-custom-function-5dcedf5f-45a5-4dd7-b8f4-4d35c386d712
-[3]: https://learn.microsoft.com/en-us/power-query/custom-function
-[4]: https://radacad.com/custom-functions-made-easy-in-power-bi-desktop
-[5]: https://learn.microsoft.com/en-us/power-query/dataflows/best-practices-developing-complex-dataflows
+[pbi-overview]: https://learn.microsoft.com/en-us/power-bi/fundamentals/power-bi-overview
+[pq-overview]: https://learn.microsoft.com/en-us/power-query/power-query-what-is-power-query
+[pq-best-practices]: https://learn.microsoft.com/en-us/power-query/best-practices
+[pq-create-custom-functions]: https://support.microsoft.com/en-us/office/create-and-invoke-a-custom-function-5dcedf5f-45a5-4dd7-b8f4-4d35c386d712
+[pq-custom-functions]: https://learn.microsoft.com/en-us/power-query/custom-function
+[pq-functions-made-easy]: https://radacad.com/custom-functions-made-easy-in-power-bi-desktop
+[df-best-practices]: https://learn.microsoft.com/en-us/power-query/dataflows/best-practices-developing-complex-dataflows
 
 ## Usage
 
@@ -28,18 +30,18 @@ Due to PowerQuery's inability to import external modules (😩), these will need
 
 ### Semi-Automatic
 
-Using the process defined [here][6], you can pull the source code directly from the GitHub repository.
+Using the process defined [here][pq-calling-online-functions], you can pull the source code directly from the GitHub repository.
 
-[6]: https://stackoverflow.com/questions/57232378/store-power-query-custom-function-online-github-etc-and-call-it
+[pq-calling-online-functions]: https://stackoverflow.com/questions/57232378/store-power-query-custom-function-online-github-etc-and-call-it
 
 My testing shows that this method works well on both PowerQuery with PowerBI Desktop, and PowerQuery with Excel, and PowerQuery with PowerBI DataFlows.
 
 > 1. Location the function you'd like to use in this library.
 > 2. Open the "Raw" file.<br>
->    ![][7]
+>    ![][get-raw-code]
 > 3. Copy the URL.
 > 4. Go to PowerQuery and open a new _Blank_ query<br>
->    ![][8]
+>    ![][new-blank-query]
 > 5. Change the function to look like this:<br>
 >    ```fs
 >    Expression.Evaluate(Text.FromBinary(Web.Contents(<PasteTheUrlHere>)),#shared)
@@ -52,19 +54,19 @@ My testing shows that this method works well on both PowerQuery with PowerBI Des
 >        Source
 >    ```
 > 6. Which will give you the result as expected:<br>
->    ![][9]
+>    ![][query-result]
 
-[7]: https://i.stack.imgur.com/n9Onf.png
-[8]: https://learn.microsoft.com/en-us/power-bi/transform-model/media/desktop-query-overview/query-overview-new-source-menu.png
-[9]: https://i.stack.imgur.com/vAzy6.png
+[get-raw-code]: https://i.stack.imgur.com/n9Onf.png
+[new-blank-query]: https://learn.microsoft.com/en-us/power-bi/transform-model/media/desktop-query-overview/query-overview-new-source-menu.png
+[query-result]: https://i.stack.imgur.com/vAzy6.png
 
 ## Function Documentation
 
-I've tried to document some functions (like, for example, [`fun_AddPrimaryKeyFromListOfColumns.pq`][10]). However, adding function docs in PowerQuery is (quite frankly) very messy 😫... for more info, see [here][11] and [here][12]. It's on my to-do list to add some helpful docs for each function, plus some examples of how to implement them. But I haven't quite found the time for this just yet. Any help from the Open Source Community would be fantastic! 😁
+I've tried to document some functions (like, for example, [`fun_AddPrimaryKeyFromListOfColumns.pq`][pq-function-with-docs]). However, adding function docs in PowerQuery is (quite frankly) very messy 😫... for more info, see [here][pq-function-documentation] and [here][pq-metadata-primer]. It's on my to-do list to add some helpful docs for each function, plus some examples of how to implement them. But I haven't quite found the time for this just yet. Any help from the Open Source Community would be fantastic! 😁
 
-[10]: /PowerQuery/Functions/Tables/fun_AddPrimaryKeyFromListOfColumns.pq
-[11]: https://docs.microsoft.com/en-us/power-query/handlingdocumentation
-[12]: https://bengribaudo.com/blog/2021/03/17/5523/power-query-m-primer-part20-metadata
+[pq-function-with-docs]: /PowerQuery/Functions/Tables/fun_AddPrimaryKeyFromListOfColumns.pq
+[pq-function-documentation]: https://docs.microsoft.com/en-us/power-query/handlingdocumentation
+[pq-metadata-primer]: https://bengribaudo.com/blog/2021/03/17/5523/power-query-m-primer-part20-metadata
 
 ## Other Repo's
 
@@ -76,7 +78,7 @@ The [`GenericFolderStructure/`](GenericFolderStructure/) directory is the struct
 
 ## Contribution
 
-Contributions are welcome. Please [Fork][13] the repo and submit a [Pull Request][14] for any updates that you'd like to make.
+Contributions are welcome. Please [Fork][gh-fork-a-repo] the repo and submit a [Pull Request][gh-submit-pull-request] for any updates that you'd like to make.
 
-[13]: https://docs.github.com/en/get-started/quickstart/fork-a-repo
-[14]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork
+[gh-fork-a-repo]: https://docs.github.com/en/get-started/quickstart/fork-a-repo
+[gh-submit-pull-request]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork
