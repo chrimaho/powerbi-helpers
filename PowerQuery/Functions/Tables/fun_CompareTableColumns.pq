@@ -1,6 +1,10 @@
 let
     fun_CompareTableColumns =
-        (Table1 as table, Table2 as table, optional Name1 as nullable text, optional Name2 as nullable text) =>
+        ( Table1 as table
+        , Table2 as table
+        , optional Name1 as nullable text
+        , optional Name2 as nullable text
+        ) as table =>
             let
                 default_Name1 =
                     if Name1 is null then
