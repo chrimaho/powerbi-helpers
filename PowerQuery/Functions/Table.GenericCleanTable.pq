@@ -3,6 +3,8 @@ let
     tbl_Table as table
   ) as table =>
     let
+      fun_CleanHeaders = Expression.Evaluate(Text.FromBinary(Web.Contents("https://raw.githubusercontent.com/chrimaho/powerbi-helpers/main/PowerQuery/Functions/GetData/Table.CleanHeaders.pq")),#shared),
+      fun_ConvertColumnsToType = Expression.Evaluate(Text.FromBinary(Web.Contents("https://raw.githubusercontent.com/chrimaho/powerbi-helpers/main/PowerQuery/Functions/GetData/Table.ConvertColumnsToType.pq")),#shared),
       Source = tbl_Table,
       add_Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
       fix_Headers = fun_CleanHeaders(add_Headers),
