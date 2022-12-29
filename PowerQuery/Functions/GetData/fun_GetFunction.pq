@@ -3,7 +3,7 @@ let
     txt_UrlOrName as text,
     optional txt_Method as nullable text,
     optional txt_BaseUrl as nullable text
-  ) as function =>
+  ) =>
     let
       Method = 
         if List.Contains({null, ""}, txt_Method) then
