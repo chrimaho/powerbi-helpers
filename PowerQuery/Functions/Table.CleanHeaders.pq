@@ -1,5 +1,5 @@
 let 
-  fun_CleanTableHeaders = (
+  fun_CleanHeaders = (
     tbl_Table as table
   ) as table =>
     let
@@ -15,4 +15,4 @@ let
     in
       fix_Ampersand
 in
-  fun_CleanTableHeaders
+  fun_CleanHeaders
